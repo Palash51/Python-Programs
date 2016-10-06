@@ -1,0 +1,13 @@
+a = "this is me"
+print(a[0])
+print(a[4])
+print(a[-1])
+print(a[1:5])
+print(a[2:])
+print(a[:3])
+print(a[0:-1])
+print(a[0:9:2])
+print(a[::3])
+print(a[::-1])
+print(a[slice(None,None,2)])
+print(a[20:20:20])
