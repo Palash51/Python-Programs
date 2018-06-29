@@ -47,7 +47,7 @@ class MainTictactoe(TictactoeAbstract):
         else:
             self.used_index_list.append(user_input)
             self.used_index_list_actuals.append(self.position_dict[user_input])
-            
+
             return self.position_dict[user_input]
 
     def players_move(self, i):
@@ -105,22 +105,27 @@ class MainTictactoe(TictactoeAbstract):
             return latest_board, new_list
 
     def check_wining_places(self):
-        """it will check all the possible places"""
-        # print(self.winning_rows)
+        """
+        it will check all the possible places
+        comb_players == players possible combination
+        comb_system == system's possible combination 
+        """
         players_index = self.player_places
-        comb = list(itertools.combinations(players_index, 2))
-        for x in self.winning_rows:
-            for i in comb:
+        comb_players = list(itertools.combinations(players_index, 2))
+        comb_system = list(itertools.combinations(
+            (list(set(self.used_index_list_actuals) - set(self.player_places))), 2))
+        comb = comb_system + comb_players
+        for i in comb:
+            for x in self.winning_rows:
                 if (set(i).issubset(x)):
                     self.possible_indexes.append(list(set(x) - set(i))[0])
         for item in self.possible_indexes:
             if item not in self.used_index_list_actuals:
                 return [{v: k for k, v in self.position_dict.items()}[item]]
-
+                
         for f in self.position_dict.items():
             if f[1] not in self.used_index_list_actuals:
                 return [f[0]]
-
 
 
 n = ('''
