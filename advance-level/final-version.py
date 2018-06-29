@@ -2,7 +2,7 @@ import random
 from random import randint
 import time
 import itertools
-
+import sys
 
 class TictactoeAbstract:
     """abstract class for tic tac toe game"""
@@ -97,10 +97,10 @@ class MainTictactoe(TictactoeAbstract):
             for val in self.winning_rows:
                 u = (list(set(self.used_index_list_actuals) - set(self.player_places)))
                 if (set(val).issubset(self.player_places)):
-                    print("You Won")
+                    sys.exit("You Won")
 
                 if (set(val).issubset(u)):
-                    print("System Won")
+                    sys.exit("System Won")
 
             return latest_board, new_list
 
@@ -122,7 +122,7 @@ class MainTictactoe(TictactoeAbstract):
         for item in self.possible_indexes:
             if item not in self.used_index_list_actuals:
                 return [{v: k for k, v in self.position_dict.items()}[item]]
-                
+
         for f in self.position_dict.items():
             if f[1] not in self.used_index_list_actuals:
                 return [f[0]]
@@ -163,6 +163,7 @@ def main():
         time.sleep(3)
         p1.system_input(i)
 
+    
 
 if __name__ == '__main__':
     main()
