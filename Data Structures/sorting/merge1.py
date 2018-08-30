@@ -6,7 +6,9 @@ def mergeSort(alist):
         righthalf = alist[mid:]
 
         mergeSort(lefthalf)
+        print("1")
         mergeSort(righthalf)
+        print("2")
 
         i=0
         j=0

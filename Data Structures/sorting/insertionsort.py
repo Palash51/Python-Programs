@@ -9,12 +9,12 @@ for i in range(1,len(a)):
         a[j] = a[j-1]
         a[j-1] = temp
         j = j - 1
-print a
+print(a)
 
 # n = 10
 # for i in range(n,0,-2):
 # 	print i
-print time.time() - start_time
+#print time.time() - start_time
 
 #0.000999927520752
 #0.00100016593933

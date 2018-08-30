@@ -1,6 +1,6 @@
-'''a = open('pyt.txt').read().split
-print a
-'''
+# a = open('pyt.txt').read().split
+# print(a)
+
 
 import random
 

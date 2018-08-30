@@ -28,7 +28,13 @@
 
 n = int(input())
 lst = []
-for _ in range(n):
-	lst.append(list(map(int, input().rstrip().split())))
+# for _ in range(n):
+# 	lst.append(list(map(int, input().rstrip().split())))
 
-print(lst)
+l = list(map(int, raw_input().split()))
+
+x = int(input())
+
+new_l = list(map(int, raw_input().split()))
+print(l)
+print(new_l)

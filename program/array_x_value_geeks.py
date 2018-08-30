@@ -4,6 +4,8 @@ def printpair(arr,val):
 	found = True
 	for i in range(0,len(arr)):
 		temp = val - arr[i]
+		import pdb
+		pdb.set_trace()
 		if temp>=0 and binmap[temp]==1 and found == True:
 			print arr[i],temp
 		binmap[arr[i]] = 1

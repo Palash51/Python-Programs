@@ -1,4 +1,5 @@
 class Node:
+    
     def __init__(self,data):
         self.data = data
         self.next = None
@@ -23,13 +24,13 @@ class LinkedList:
         self.head = None
 
     def isEmpty(self):
-        print self.head == None
+        print(self.head == None)
 
     def add(self,item):
         temp = Node(item)
         temp.setNext(self.head)
         self.head = temp
-        print item
+        print(item)
 
     def size(self):
         current = self.head
@@ -38,7 +39,7 @@ class LinkedList:
             count = count + 1
             current = current.getNext()
 
-        print count
+        print(count)
 
     def search(self,item):
         current = self.head
@@ -49,9 +50,11 @@ class LinkedList:
             else:
                 current = current.getNext()
 
-        print found
+        print(found)
+
 
 mylist = LinkedList()
+
 mylist.add(31)
 mylist.add(77)
 mylist.add(17)
