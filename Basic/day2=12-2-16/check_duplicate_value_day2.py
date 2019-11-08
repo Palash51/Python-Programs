@@ -13,7 +13,7 @@ check(A)
 def find_duplicate_hash(A):
     d = {}
     for index, item in enumerate(A):
-        if d.hash_key(item):
+        if item in d:
             return item
         else:
             d[item] = True
