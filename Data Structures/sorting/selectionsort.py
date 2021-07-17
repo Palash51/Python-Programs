@@ -12,4 +12,4 @@ for i in range(len(a)):
     a[least] = temp
     
 
-print a
+print (a)
